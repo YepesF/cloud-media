@@ -8,12 +8,14 @@
     "start": "nodemon -L"
   },
   "dependencies": {
+    "@google-cloud/local-auth": "2.1.0",
     "axios": "^1.1.3",
     "body-parser": "^1.20.1",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "googleapis": "105",
     "morgan": "^1.10.0",
     "pg": "^8.8.0",
     "sequelize": "^6.25.3"
