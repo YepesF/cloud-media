@@ -7,6 +7,7 @@ const SPREADSHEET_ID = "1hMn0Nqk1wCVPKhLd3PSOwF_wr22OhEz9-vTx7f64Yj0";
 const RANGE_CLEAR = "FORMULA!A2:E4929";
 const RANGE_SET = "FORMULA!A2";
 const USER_ENTERED = "USER_ENTERED";
+const RAW = "RAW";
 
 /**
  * Method of authentication of Google Sheets.
@@ -107,7 +108,7 @@ const setSheet = async (values) => {
     const res = await sheets.spreadsheets.values.update({
       spreadsheetId: SPREADSHEET_ID,
       range: RANGE_SET,
-      valueInputOption: USER_ENTERED,
+      valueInputOption: RAW,
       resource,
     });
     console.log("%d cells updated.", result.data.updatedCells);
