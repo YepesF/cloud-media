@@ -17,7 +17,9 @@
     "express": "^4.18.2",
     "googleapis": "105",
     "morgan": "^1.10.0",
+    "node-routeros": "^1.6.9",
     "pg": "^8.8.0",
+    "routeros-node": "^0.1.0",
     "sequelize": "^6.25.3"
   },
   "devDependencies": {
