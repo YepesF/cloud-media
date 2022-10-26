@@ -12,6 +12,7 @@ const connection = (host) => {
     host,
     user: USER,
     password: PASSWORD,
+    timeout: 30,
   });
 
   return conn;
@@ -41,13 +42,15 @@ const getIps = async (host) => {
           response.push(arr);
         })
       );
+      // Connection closed
+      await conn.close();
     })
-    .catch((err) => {
+    .catch(async (err) => {
       // Got an error while trying to connect
-      console.log(err.message);
+      console.log(`host ${host} - ${err.message}`);
+      getIps(host);
     });
-  // Connection closed
-  await conn.close();
+
   return response;
 };
 
