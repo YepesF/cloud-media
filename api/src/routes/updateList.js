@@ -3,6 +3,7 @@ const router = Router();
 
 const { clearSheet, setSheet } = require("../controllers/googleApi");
 const { getIps } = require("../controllers/routerOs");
+const { exc } = require("../controllers/felipe");
 
 const CCRS = [
   //SANTA FE.
@@ -39,15 +40,15 @@ router.get("/", async (req, res) => {
     /**
      * Clear sheet.
      */
-    await clearSheet();
+    clearSheet();
 
     /**
      * Set data in sheet.
      */
-    await setSheet(response);
+    setSheet(response);
     res.json("Process successful.");
   } catch (error) {
-    res.status(400).json(error.message);
+    res.status(400).json("error");
   }
 });
 
