@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.hola {
+  background-color: red;
+  background: blue;
+  padding: 1.5rem;
+  margin: 8rem;
+  border-radius: 2rem;
+}
